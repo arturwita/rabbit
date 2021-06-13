@@ -7,6 +7,6 @@ import { appFactory } from "./app";
     const app = appFactory();
 
     app.listen(PORT, HOST, () => {
-        console.log(`Example app listening at ${HOST}:${PORT}`)
+        console.log(`Server is listening at http://${HOST}:${PORT}`)
     });
 })();

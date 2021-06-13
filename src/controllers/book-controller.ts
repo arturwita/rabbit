@@ -17,4 +17,4 @@ export const bookControllerFactory = (): BookController => {
         create,
         remove
     }
-}
+};
