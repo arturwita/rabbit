@@ -2,7 +2,7 @@
     "compilerOptions": {
         "target": "es5",
         "module": "commonjs",
-        "allowJs": true, // potentially it should be set to false
+        "allowJs": true,
         "declaration": false,
         "outDir": "./dist",
         "rootDir": "./",

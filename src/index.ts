@@ -1,10 +1,12 @@
-import { fastify } from "fastify"
-import { getNumberEnv } from "./util/env-variables-parser";
+import { getNumberEnv, getStringEnv } from "./util/env-variables-parser";
+import { appFactory } from "./app";
 
-const server = fastify({ logger: true });
-const PORT = getNumberEnv('PORT') || 3000;
+(() => {
+    const PORT = getNumberEnv("PORT") || 3000;
+    const HOST = getStringEnv("HOST") || "127.0.0.1";
+    const app = appFactory();
 
-server.listen(PORT, (err, address) => {
-    if (err) throw err
-    console.log(`Server is now listening on ${address}`);
-})
+    app.listen(PORT, HOST, () => {
+        console.log(`Example app listening at ${HOST}:${PORT}`)
+    });
+})();
