@@ -1,0 +1,3 @@
+export enum BOOK_ERROR_CODES {
+    NOT_FOUND = "BOOK_NOT_FOUND"
+}

@@ -7,8 +7,8 @@ export const appFactory = () => {
     const bookRoutes = bookRoutesFactory();
 
     app.use(express.json());
-    app.use(errorHandler);
     app.use("/", bookRoutes);
+    app.use(errorHandler);
 
     return app;
 };
